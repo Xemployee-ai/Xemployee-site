@@ -61,6 +61,9 @@ export function SiteFooter() {
                     <span>English</span>
                 </div>
             </div>
+            <div className="mt-4 text-center text-xs text-white/40 font-mono">
+                Xemployee™ is a trademark of Lee Wen Xuan.
+            </div>
         </div>
     )
 }

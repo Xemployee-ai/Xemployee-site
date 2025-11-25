@@ -38,7 +38,7 @@ export default function Hero() {
           <span className="relative z-10 font-semibold tracking-wide">Xemployee · Humanity&apos;s Final Upgrade</span>
         </motion.div>
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-white text-center text-balance leading-tight mb-2">
-          Xemployee: AI Employees
+          Xemployee™: AI Employees
         </h1>
         <p className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-white text-center text-balance leading-tight mb-6">
           Fire your humans. Hire AI.

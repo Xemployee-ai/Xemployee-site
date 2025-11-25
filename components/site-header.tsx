@@ -14,7 +14,7 @@ export function SiteHeader() {
                         <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-cyan-200 via-indigo-400 to-pink-400 shadow-[0_0_20px_rgba(99,102,241,0.65)]" />
                         <div className="absolute inset-[6px] rounded-full bg-white/20 blur-xl" />
                     </div>
-                    <span className="font-mono text-lg font-semibold text-white">Xemployee</span>
+                    <span className="font-mono text-lg font-semibold text-white">Xemployee™</span>
                 </Link>
 
                 {/* Centered Navigation */}

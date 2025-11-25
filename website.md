@@ -1,8 +1,18 @@
 # how to update vercel
 
 
+Flow:
+
+You edit code locally.
+
+You commit:
+
 git add .
-git commit -m "Pin shaders-react version"
+git commit -m "Some change"
+
+
+You push to the branch Vercel is watching (usually main):
+
 git push
 
 
