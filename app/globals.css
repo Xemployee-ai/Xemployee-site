@@ -1,0 +1,246 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to Cluely-inspired blue-purple-orange gradient palette */
+  --background: oklch(0 0 0); /* Pure black background */
+  --foreground: oklch(1 0 0); /* Pure white for text and light effects */
+  --card: oklch(0.1 0 0 / 0.1); /* Slightly opaque dark for card effects */
+  --card-foreground: oklch(1 0 0); /* White for card text */
+  --popover: oklch(0 0 0 / 0.8); /* Dark semi-transparent for popover backgrounds */
+  --popover-foreground: oklch(1 0 0); /* White for popover text */
+  --primary: oklch(1 0 0); /* White for primary interactive elements */
+  --primary-foreground: oklch(0 0 0); /* Black for text on primary elements */
+  /* Sky blue from Cluely hero section */
+  --secondary: oklch(0.72 0.12 235); /* Sky blue for secondary actions */
+  --secondary-foreground: oklch(1 0 0); /* White for text on secondary elements */
+  --muted: oklch(1 0 0 / 0.5); /* Muted white for less emphasized text */
+  --muted-foreground: oklch(0.7 0 0); /* Light gray for muted text */
+  /* Sky blue accent */
+  --accent: oklch(0.72 0.12 235); /* Accent color for highlights */
+  --accent-foreground: oklch(1 0 0); /* White for accent text */
+  --destructive: oklch(0.6 0.25 15); /* Red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* White for destructive text */
+  --border: oklch(1 0 0 / 0.2); /* Light border color */
+  --input: oklch(1 0 0 / 0.1); /* Input background */
+  --ring: oklch(1 0 0 / 0.3); /* Ring effect color */
+  /* Updated chart colors to match Cluely gradient */
+  --chart-1: oklch(0.72 0.12 235); /* Sky Blue */
+  --chart-2: oklch(0.7 0.15 280); /* Purple */
+  --chart-3: oklch(0.75 0.15 320); /* Pink */
+  --chart-4: oklch(0.78 0.15 35); /* Peach/Orange */
+  --chart-5: oklch(0.8 0.18 50); /* Warm Orange */
+  --radius: 0.5rem;
+  --sidebar: oklch(0 0 0 / 0.9); /* Dark sidebar background */
+  --sidebar-foreground: oklch(1 0 0); /* Sidebar text color */
+  /* Sky blue sidebar primary */
+  --sidebar-primary: oklch(0.72 0.12 235); /* Primary sidebar accent */
+  --sidebar-primary-foreground: oklch(1 0 0); /* Sidebar primary text */
+  /* Sky blue sidebar accent */
+  --sidebar-accent: oklch(0.72 0.12 235); /* Accent color for sidebar elements */
+  --sidebar-accent-foreground: oklch(1 0 0); /* Text color for sidebar accent */
+  --sidebar-border: oklch(1 0 0 / 0.2); /* Sidebar border color */
+  --sidebar-ring: oklch(1 0 0 / 0.3); /* Sidebar ring effect color */
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}
+
+.dark {
+  /* Dark mode uses same values since we want pure black background */
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.1 0 0 / 0.1);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0 0 0 / 0.8);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(1 0 0);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.72 0.12 235);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(1 0 0 / 0.5);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.72 0.12 235);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.6 0.25 15);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 0.2);
+  --input: oklch(1 0 0 / 0.1);
+  --ring: oklch(1 0 0 / 0.3);
+  --chart-1: oklch(0.72 0.12 235);
+  --chart-2: oklch(0.7 0.15 280);
+  --chart-3: oklch(0.75 0.15 320);
+  --chart-4: oklch(0.78 0.15 35);
+  --chart-5: oklch(0.8 0.18 50);
+  --sidebar: oklch(0 0 0 / 0.9);
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.72 0.12 235);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.72 0.12 235);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(1 0 0 / 0.2);
+  --sidebar-ring: oklch(1 0 0 / 0.3);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Manifesto glassmorphism effect - apply to any element */
+  .manifesto-effect {
+    @apply border border-border/50 bg-primary/20 backdrop-blur-sm ring-1 ring-offset-primary/10 ring-border/10 ring-offset-2;
+    box-shadow: var(--shadow-button);
+    transition: color 300ms ease-out, background-color 300ms ease-out, border-color 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .manifesto-effect:hover {
+    @apply border-border/15 bg-primary/30 ring-primary/15 ring-offset-4 ring-offset-black/20;
+    box-shadow: var(--shadow-button-hover);
+  }
+
+  /* Manifesto effect with shine animation */
+  .manifesto-effect-shine {
+    @apply border border-border/50 bg-primary/20 backdrop-blur-sm ring-1 ring-offset-primary/10 ring-border/10 ring-offset-2 relative overflow-hidden;
+    box-shadow: var(--shadow-button);
+    transition: color 300ms ease-out, background-color 300ms ease-out, border-color 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .manifesto-effect-shine:hover {
+    @apply border-border/15 bg-primary/30 ring-primary/15 ring-offset-4 ring-offset-black/20;
+    box-shadow: var(--shadow-button-hover);
+  }
+
+  .manifesto-effect-shine::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shine 2s ease-in-out infinite;
+  }
+
+  /* Rounded variants */
+  .manifesto-effect-rounded {
+    @apply rounded-lg;
+  }
+
+  .manifesto-effect-pill {
+    @apply rounded-full;
+  }
+}
+
+@theme {
+  --animate-shine: shine 2s ease-in-out infinite;
+  --shadow-button: inset 0 0 1px 1px rgba(255, 255, 255, 0.05), inset 0 0 2px 1px rgba(255, 255, 255, 0.2), inset -1px -1px 1px 0px rgba(0, 0, 0, 0.0), 0 0 10px 0 rgba(255, 255, 255, 0.1);
+  --shadow-button-hover: inset 0 0 5px 1px rgba(255, 255, 255, 0.2), inset 0.5px 0.5px 1px 0.5px rgba(255, 255, 255, 0.5), inset -0.5px -0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2), 0 0 12px 4px rgba(255, 255, 255, 0.5);
+  --transition-colors-and-shadows: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+}
+
+/* === Page transition circle overlay === */
+.page-transition-circle-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.page-transition-circle {
+  position: absolute;
+
+  /* start near the ball (bottom-32 right-12) */
+  left: calc(100% - 3rem);
+  top: calc(100% - 8rem);
+
+  /* large enough to cover the whole viewport */
+  width: 200vmax;
+  height: 200vmax;
+
+  border-radius: 9999px;
+
+  /* you can tweak this to the brand later */
+  background: radial-gradient(circle, #38bdf8, #0f172a);
+
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+
+  animation:
+    page-transition-circle-expand 0.8s ease-out forwards,
+    page-transition-circle-fade 0.8s ease-out forwards;
+}
+
+@keyframes page-transition-circle-expand {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes page-transition-circle-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
