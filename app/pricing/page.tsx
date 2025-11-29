@@ -13,6 +13,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { SiteFooter } from "@/components/site-footer"
+import { AnimatedBall } from "@/components/animated-ball"
 
 export default function Page() {
     const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly")
@@ -73,18 +74,23 @@ export default function Page() {
         <div className="w-full min-h-screen bg-transparent relative overflow-y-auto">
             <BushidoShaderBackground variant="main" />
 
-            <div className="relative z-10 min-h-screen flex flex-col pt-32 px-8 md:px-16 pb-16 max-w-7xl mx-auto">
+            <div className="relative z-10 container mx-auto px-4 pt-48 pb-20">
 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <motion.h1
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="font-serif text-5xl md:text-6xl text-white mb-8"
+                        className="mb-8"
                     >
-                        Pricing: Arm Your Empire
-                    </motion.h1>
+                        <h1 className="font-serif text-5xl md:text-6xl text-white mb-4">
+                            Pricing
+                        </h1>
+                        <p className="text-white/60 font-serif text-xl italic">
+                            Arm Your Empire
+                        </p>
+                    </motion.div>
 
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -180,7 +186,7 @@ export default function Page() {
                                     <div className="flex items-center gap-2 mb-2">
                                         <h3 className="text-2xl font-medium text-white">{plan.name}</h3>
                                         {plan.tag && (
-                                            <span className="text-[10px] font-mono uppercase tracking-wider text-orange-400 bg-orange-400/10 px-2 py-0.5 rounded">
+                                            <span className="text-[10px] font-mono uppercase tracking-wider text-red-600 bg-red-600/10 px-2 py-0.5 rounded">
                                                 {plan.tag}
                                             </span>
                                         )}
@@ -254,7 +260,7 @@ export default function Page() {
                         transition={{ duration: 0.5 }}
                         className="font-serif text-4xl md:text-5xl text-white mb-12 text-center"
                     >
-                        xEmployee vs. Humans
+                        Xemployee vs. Humans
                     </motion.h2>
 
                     <motion.div
@@ -268,7 +274,7 @@ export default function Page() {
                             <thead>
                                 <tr className="border-b border-white/20">
                                     <th className="text-left py-4 px-6 text-white/60 font-mono text-sm font-normal"></th>
-                                    <th className="text-left py-4 px-6 text-secondary font-medium">xEmployee</th>
+                                    <th className="text-left py-4 px-6 text-red-600 font-bold">Xemployee</th>
                                     <th className="text-left py-4 px-6 text-white/60 font-medium">Humans</th>
                                 </tr>
                             </thead>
@@ -349,7 +355,7 @@ export default function Page() {
                                     {[
                                         {
                                             q: "Why pay? Free humans aren't free.",
-                                            a: "Humans cost $50K/year + benefits. xEmployee costs $20/mo. Do the math."
+                                            a: "Humans cost $50K/year + benefits. Xemployee costs $20/mo. Do the math."
                                         },
                                         {
                                             q: "Which tier?",
@@ -389,6 +395,10 @@ export default function Page() {
 
                 <SiteFooter />
 
+            </div>
+
+            <div className="fixed bottom-32 right-12 z-10 pointer-events-auto">
+                <AnimatedBall targetPath="/" />
             </div>
         </div>
     )

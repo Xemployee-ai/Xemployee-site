@@ -5,44 +5,76 @@
 
 :root {
   /* Updated to Cluely-inspired blue-purple-orange gradient palette */
-  --background: oklch(0 0 0); /* Pure black background */
-  --foreground: oklch(1 0 0); /* Pure white for text and light effects */
-  --card: oklch(0.1 0 0 / 0.1); /* Slightly opaque dark for card effects */
-  --card-foreground: oklch(1 0 0); /* White for card text */
-  --popover: oklch(0 0 0 / 0.8); /* Dark semi-transparent for popover backgrounds */
-  --popover-foreground: oklch(1 0 0); /* White for popover text */
-  --primary: oklch(1 0 0); /* White for primary interactive elements */
-  --primary-foreground: oklch(0 0 0); /* Black for text on primary elements */
+  --background: oklch(0 0 0);
+  /* Pure black background */
+  --foreground: oklch(1 0 0);
+  /* Pure white for text and light effects */
+  --card: oklch(0.1 0 0 / 0.1);
+  /* Slightly opaque dark for card effects */
+  --card-foreground: oklch(1 0 0);
+  /* White for card text */
+  --popover: oklch(0 0 0 / 0.8);
+  /* Dark semi-transparent for popover backgrounds */
+  --popover-foreground: oklch(1 0 0);
+  /* White for popover text */
+  --primary: oklch(1 0 0);
+  /* White for primary interactive elements */
+  --primary-foreground: oklch(0 0 0);
+  /* Black for text on primary elements */
   /* Sky blue from Cluely hero section */
-  --secondary: oklch(0.72 0.12 235); /* Sky blue for secondary actions */
-  --secondary-foreground: oklch(1 0 0); /* White for text on secondary elements */
-  --muted: oklch(1 0 0 / 0.5); /* Muted white for less emphasized text */
-  --muted-foreground: oklch(0.7 0 0); /* Light gray for muted text */
+  --secondary: oklch(0.72 0.12 235);
+  /* Sky blue for secondary actions */
+  --secondary-foreground: oklch(1 0 0);
+  /* White for text on secondary elements */
+  --muted: oklch(1 0 0 / 0.5);
+  /* Muted white for less emphasized text */
+  --muted-foreground: oklch(0.7 0 0);
+  /* Light gray for muted text */
   /* Sky blue accent */
-  --accent: oklch(0.72 0.12 235); /* Accent color for highlights */
-  --accent-foreground: oklch(1 0 0); /* White for accent text */
-  --destructive: oklch(0.6 0.25 15); /* Red for destructive actions */
-  --destructive-foreground: oklch(1 0 0); /* White for destructive text */
-  --border: oklch(1 0 0 / 0.2); /* Light border color */
-  --input: oklch(1 0 0 / 0.1); /* Input background */
-  --ring: oklch(1 0 0 / 0.3); /* Ring effect color */
+  --accent: oklch(0.72 0.12 235);
+  /* Accent color for highlights */
+  --accent-foreground: oklch(1 0 0);
+  /* White for accent text */
+  --destructive: oklch(0.6 0.25 15);
+  /* Red for destructive actions */
+  --destructive-foreground: oklch(1 0 0);
+  /* White for destructive text */
+  --border: oklch(1 0 0 / 0.2);
+  /* Light border color */
+  --input: oklch(1 0 0 / 0.1);
+  /* Input background */
+  --ring: oklch(1 0 0 / 0.3);
+  /* Ring effect color */
   /* Updated chart colors to match Cluely gradient */
-  --chart-1: oklch(0.72 0.12 235); /* Sky Blue */
-  --chart-2: oklch(0.7 0.15 280); /* Purple */
-  --chart-3: oklch(0.75 0.15 320); /* Pink */
-  --chart-4: oklch(0.78 0.15 35); /* Peach/Orange */
-  --chart-5: oklch(0.8 0.18 50); /* Warm Orange */
+  --chart-1: oklch(0.72 0.12 235);
+  /* Sky Blue */
+  --chart-2: oklch(0.7 0.15 280);
+  /* Purple */
+  --chart-3: oklch(0.75 0.15 320);
+  /* Pink */
+  --chart-4: oklch(0.78 0.15 35);
+  /* Peach/Orange */
+  --chart-5: oklch(0.8 0.18 50);
+  /* Warm Orange */
   --radius: 0.5rem;
-  --sidebar: oklch(0 0 0 / 0.9); /* Dark sidebar background */
-  --sidebar-foreground: oklch(1 0 0); /* Sidebar text color */
+  --sidebar: oklch(0 0 0 / 0.9);
+  /* Dark sidebar background */
+  --sidebar-foreground: oklch(1 0 0);
+  /* Sidebar text color */
   /* Sky blue sidebar primary */
-  --sidebar-primary: oklch(0.72 0.12 235); /* Primary sidebar accent */
-  --sidebar-primary-foreground: oklch(1 0 0); /* Sidebar primary text */
+  --sidebar-primary: oklch(0.72 0.12 235);
+  /* Primary sidebar accent */
+  --sidebar-primary-foreground: oklch(1 0 0);
+  /* Sidebar primary text */
   /* Sky blue sidebar accent */
-  --sidebar-accent: oklch(0.72 0.12 235); /* Accent color for sidebar elements */
-  --sidebar-accent-foreground: oklch(1 0 0); /* Text color for sidebar accent */
-  --sidebar-border: oklch(1 0 0 / 0.2); /* Sidebar border color */
-  --sidebar-ring: oklch(1 0 0 / 0.3); /* Sidebar ring effect color */
+  --sidebar-accent: oklch(0.72 0.12 235);
+  /* Accent color for sidebar elements */
+  --sidebar-accent-foreground: oklch(1 0 0);
+  /* Text color for sidebar accent */
+  --sidebar-border: oklch(1 0 0 / 0.2);
+  /* Sidebar border color */
+  --sidebar-ring: oklch(1 0 0 / 0.3);
+  /* Sidebar ring effect color */
   --font-geist-sans: "Geist Sans", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
 }
@@ -129,25 +161,52 @@
     transform: translateX(-100%);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(200%);
     opacity: 0;
   }
 }
 
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-flow {
+  background-size: 200% 200%;
+  animation: gradient-flow 3s ease infinite;
+}
+
+.animate-shine {
+  animation: shine 3s ease-in-out infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 @layer utilities {
+
   /* Manifesto glassmorphism effect - apply to any element */
   .manifesto-effect {
     @apply border border-border/50 bg-primary/20 backdrop-blur-sm ring-1 ring-offset-primary/10 ring-border/10 ring-offset-2;
@@ -240,6 +299,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

@@ -20,15 +20,29 @@ git push
 
 Home → Hook. “WTF is this? Oh, cool.” → click.
 
-Features → Product. “What can these AI employees do and how?”
+Product -> . “What can these AI employees do and how?”
 
-Enterprise → Scale & safety. “Can we run this at org level?”
+Xemployees -> Our expertly pre made ready to use employees 
+
+Enterprise → Scale & safety. “Can we run this at org level?” Enterprise is for people who move real money and take real blame.
 
 Pricing → Money. “Can I afford this and what do I get?”
 
 Resources → Depth. “Show me docs, changelog, blog, guides.”
 
 Dojo → Belief. “What’s the bigger vision / cult / philosophy?”
+
+
+
+
+Home/Product/Xemployees
+
+“Look at this thing. It’s insane. It replaces humans.”
+
+Enterprise
+
+“Yes, you can run hundreds of these inside a real company without getting fired.”
+
 
 ## home page
 1. Home – The hook & first filter

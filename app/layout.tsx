@@ -8,7 +8,10 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Xemployee - AI Employees for Business",
   description: "Replace 90% of office work with battle-tested AI employees.",
-  generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 import { SiteHeader } from "@/components/site-header"

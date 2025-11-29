@@ -29,7 +29,7 @@ export function AnimatedBall({ targetPath = "/dojo", className }: AnimatedBallPr
         y: isAnimated ? 50 : 0,
         opacity: isAnimated ? 0 : 1,
         filter: isAnimated ? "blur(4px)" : "blur(0px)",
-        rotation: isAnimated ? 180 : 0,
+        rotate: isAnimated ? 180 : 0,
       }}
       transition={{
         duration: 0.5,
@@ -46,12 +46,12 @@ export function AnimatedBall({ targetPath = "/dojo", className }: AnimatedBallPr
         <div className="h-[2px] w-[2px] bg-white rounded-full absolute top-5 left-9 blur-[0.8px]" />
         <div className="h-[2px] w-[2px] bg-white rounded-full absolute top-7 left-7 blur-[1px]" />
       </div>
-      
+
       {/* Blurred background layer */}
       <LiquidMetal
         style={{ height: 80, width: 80, filter: "blur(14px)", position: "absolute" }}
         colorBack="hsl(0, 0%, 0%, 0)"
-        colorTint="hsl(190, 90%, 50%)"
+        colorTint="hsl(0, 85%, 55%)"
         repetition={4}
         softness={0.5}
         shiftRed={0.3}
@@ -65,12 +65,12 @@ export function AnimatedBall({ targetPath = "/dojo", className }: AnimatedBallPr
         rotation={50}
         speed={5}
       />
-      
+
       {/* Sharp foreground layer */}
       <LiquidMetal
         style={{ height: 80, width: 80 }}
         colorBack="hsl(0, 0%, 0%, 0)"
-        colorTint="hsl(190, 90%, 50%)"
+        colorTint="hsl(0, 85%, 55%)"
         repetition={4}
         softness={0.5}
         shiftRed={0.3}

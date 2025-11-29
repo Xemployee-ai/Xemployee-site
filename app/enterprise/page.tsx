@@ -16,6 +16,7 @@ import { EnterpriseLatest } from "@/components/enterprise-latest"
 import { EnterpriseFAQ } from "@/components/enterprise-faq"
 import { EnterpriseCTA } from "@/components/enterprise-cta"
 import { SiteFooter } from "@/components/site-footer"
+import { AnimatedBall } from "@/components/animated-ball"
 
 export default function Page() {
     const [staffSize, setStaffSize] = useState(100)
@@ -38,7 +39,7 @@ export default function Page() {
         <div className="w-full min-h-screen bg-transparent relative overflow-y-auto">
             <BushidoShaderBackground variant="main" />
 
-            <div className="relative z-10 min-h-screen flex flex-col pt-32 px-8 md:px-16 pb-16 max-w-7xl mx-auto">
+            <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
 
                 {/* Hero Section */}
                 <div className="mb-24">
@@ -55,7 +56,7 @@ export default function Page() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="font-serif text-5xl md:text-7xl text-white mb-8 max-w-4xl leading-tight"
+                        className="font-serif text-5xl md:text-6xl text-white mb-8 max-w-4xl leading-tight"
                     >
                         Replace Your Workforce Overnight
                     </motion.h1>
@@ -169,7 +170,7 @@ export default function Page() {
                     className="mb-32 bg-white/5 border border-white/10 rounded-xl p-12"
                 >
                     <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
-                        Why Enterprises Choose xEmployee
+                        Why Enterprises Choose Xemployee
                     </h2>
                     <p className="text-white/40 text-sm font-mono mb-8">
                         Your competitors are still using humans. Pity them.
@@ -233,7 +234,7 @@ export default function Page() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-white/60 text-xs font-mono mb-1">Annual xEmployee Cost</div>
+                                    <div className="text-white/60 text-xs font-mono mb-1">Annual Xemployee Cost</div>
                                     <div className="text-2xl font-bold text-white">
                                         ${aiCost}
                                     </div>
@@ -317,6 +318,10 @@ export default function Page() {
                 {/* Footer */}
                 <SiteFooter />
 
+            </div>
+
+            <div className="fixed bottom-32 right-12 z-10 pointer-events-auto">
+                <AnimatedBall targetPath="/" />
             </div>
         </div>
     )

@@ -1,7 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { ExpandableButton } from "@/components/expandable-button"
+import { Button } from "@/components/ui/button"
 
 export function SiteHeader() {
     return (
@@ -10,17 +12,50 @@ export function SiteHeader() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 ml-96 hover:opacity-80 transition-opacity">
                     <div className="relative w-10 h-10">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-300 via-indigo-500 to-pink-500 blur-[2px] animate-pulse" />
-                        <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-cyan-200 via-indigo-400 to-pink-400 shadow-[0_0_20px_rgba(99,102,241,0.65)]" />
-                        <div className="absolute inset-[6px] rounded-full bg-white/20 blur-xl" />
+                        {/* Glow effect */}
+                        <div
+                            className="absolute inset-0 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] blur-sm opacity-50 animate-gradient-flow"
+                            style={{
+                                maskImage: 'url(/Xemployeelogo.svg)',
+                                maskSize: 'contain',
+                                maskRepeat: 'no-repeat',
+                                maskPosition: 'center',
+                                WebkitMaskImage: 'url(/Xemployeelogo.svg)',
+                                WebkitMaskSize: 'contain',
+                                WebkitMaskRepeat: 'no-repeat',
+                                WebkitMaskPosition: 'center',
+                            }}
+                        />
+                        {/* Main Logo */}
+                        <div className="absolute inset-0"
+                            style={{
+                                maskImage: 'url(/Xemployeelogo.svg)',
+                                maskSize: 'contain',
+                                maskRepeat: 'no-repeat',
+                                maskPosition: 'center',
+                                WebkitMaskImage: 'url(/Xemployeelogo.svg)',
+                                WebkitMaskSize: 'contain',
+                                WebkitMaskRepeat: 'no-repeat',
+                                WebkitMaskPosition: 'center',
+                            }}
+                        >
+                            {/* Gradient Background */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] animate-gradient-flow" />
+
+                            {/* Shine Effect */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shine" />
+                        </div>
                     </div>
                     <span className="font-mono text-lg font-semibold text-white">Xemployee™</span>
                 </Link>
 
                 {/* Centered Navigation */}
                 <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-8 font-mono text-sm text-white/80">
-                    <Link href="/features" className="hover:text-white transition-colors">
-                        Features
+                    <Link href="/product" className="hover:text-white transition-colors">
+                        Product
+                    </Link>
+                    <Link href="/xemployees" className="hover:text-white transition-colors">
+                        Xemployees
                     </Link>
                     <Link href="/enterprise" className="hover:text-white transition-colors">
                         Enterprise
@@ -28,13 +63,30 @@ export function SiteHeader() {
                     <Link href="/pricing" className="hover:text-white transition-colors">
                         Pricing
                     </Link>
-                    <Link href="/resources" className="hover:text-white transition-colors">
-                        Resources
+                    <Link href="/updates" className="hover:text-white transition-colors">
+                        Updates
                     </Link>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <Button
+                            variant="manifesto"
+                            size="lg"
+                            shine={true}
+                            asChild
+                            className="relative z-10"
+                        >
+                            <Link href="/vision">
+                                vision
+                            </Link>
+                        </Button>
+                    </motion.div>
                 </div>
 
                 {/* Right Side Buttons */}
-                <div className="flex items-center space-x-8 font-mono text-sm text-white/80">
+                {/* <div className="flex items-center space-x-8 font-mono text-sm text-white/80">
                     <ExpandableButton
                         buttonText="docs"
                         layoutId="docs-modal"
@@ -104,7 +156,7 @@ export function SiteHeader() {
                             chromaBase: "#f97316"
                         }}
                     />
-                </div>
+                </div> */}
             </div>
         </nav>
     )
