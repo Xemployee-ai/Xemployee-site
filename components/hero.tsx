@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Content */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center pointer-events-none px-4 pt-80 pb-32">
+      <div className="relative min-h-screen flex flex-col items-center justify-center pointer-events-none px-4 pt-40 md:pt-80 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -46,7 +46,7 @@ export default function Hero() {
 
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-[40rem]">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-32 md:mb-[40rem]">
           <ExpandableButton
             buttonText="Launch your first AI employee"
             buttonIcon={

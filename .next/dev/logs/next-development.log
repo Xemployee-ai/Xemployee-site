@@ -1,31 +1,29 @@
-[00:00:00.859] Server  LOG      ✓ Ready in 584ms
-[00:00:04.305] Server  LOG      ○ Compiling / ...
-[00:00:05.240] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.289] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.584] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
-[00:00:05.671] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
-[00:00:10.950] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.133] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
-[00:09:05.251] Server  LOG      ✓ Compiled in 64ms
-[00:09:11.930] Server  LOG      ✓ Compiled in 39ms
-[00:09:32.009] Server  LOG      ✓ Compiled in 57ms
-[00:09:38.300] Server  LOG      ✓ Compiled in 38ms
-[00:09:47.763] Server  LOG      ✓ Compiled in 43ms
-[00:19:42.330] Server  LOG      ✓ Compiled in 50ms
-[00:21:06.141] Server  LOG      ✓ Compiled in 52ms
-[00:23:16.743] Server  LOG      ✓ Compiled in 132ms
-[00:23:35.371] Server  LOG      ✓ Compiled in 51ms
-[00:26:07.608] Server  LOG      ✓ Compiled in 46ms
-[00:26:10.060] Server  LOG      ✓ Compiled in 50ms
-[00:28:20.056] Server  LOG      ✓ Compiled in 53ms
-[00:28:53.644] Server  LOG      ✓ Compiled in 47ms
-[00:31:36.326] Server  LOG      ✓ Compiled in 48ms
-[00:31:55.211] Server  LOG      ✓ Compiled in 45ms
-[00:32:25.563] Server  LOG      ✓ Compiled in 47ms
-[00:33:54.452] Server  LOG      ✓ Compiled in 45ms
-[00:34:03.904] Server  LOG      ✓ Compiled in 42ms
-[00:34:18.308] Server  LOG      ✓ Compiled in 44ms
-[00:34:52.492] Server  LOG      ✓ Compiled in 52ms
-[00:35:34.647] Server  LOG      ✓ Compiled in 48ms
-[00:36:08.780] Server  LOG      ✓ Compiled in 113ms
-[00:38:04.927] Server  LOG      ✓ Compiled in 77ms
+[00:00:00.848] Server  LOG      ✓ Ready in 589ms
+[00:00:04.934] Server  LOG      ○ Compiling / ...
+[00:00:05.953] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.228] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
+[00:02:46.067] Server  LOG      ✓ Compiled in 92ms
+[00:03:16.324] Server  LOG      ✓ Compiled in 123ms
+[00:03:16.428] Browser ERROR   ./components/site-header.tsx:87:1
+Parsing ecmascript source code failed
+  85 |                                 asChild
+  86 |                                 className="relative z-10"
+> 87 | "use client"
+     | ^^^^^^^^^^^^
+  88 |
+  89 |                             import Link from "next/link"
+  90 |                             import {motion, AnimatePresence} from "framer-motion"
+
+Expected '</', got 'string literal (use client, "use client")'
+
+Import trace:
+  Server Component:
+    ./components/site-header.tsx
+    ./app/layout.tsx
+[00:03:52.385] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:52.627] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
+[00:06:05.669] Server  LOG      ✓ Compiled in 107ms
+[00:06:23.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:24.088] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
+[00:08:23.137] Server  LOG      ✓ Compiled in 124ms
+[00:08:53.432] Server  LOG      ✓ Compiled in 101ms

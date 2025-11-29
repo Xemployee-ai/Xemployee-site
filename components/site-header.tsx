@@ -1,162 +1,194 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { ExpandableButton } from "@/components/expandable-button"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
 
 export function SiteHeader() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
     return (
         <nav className="absolute top-0 left-0 right-0 z-50 pointer-events-auto">
-            <div className="flex justify-between items-center px-8 py-6">
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-3 ml-96 hover:opacity-80 transition-opacity">
-                    <div className="relative w-10 h-10">
-                        {/* Glow effect */}
-                        <div
-                            className="absolute inset-0 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] blur-sm opacity-50 animate-gradient-flow"
-                            style={{
-                                maskImage: 'url(/Xemployeelogo.svg)',
-                                maskSize: 'contain',
-                                maskRepeat: 'no-repeat',
-                                maskPosition: 'center',
-                                WebkitMaskImage: 'url(/Xemployeelogo.svg)',
-                                WebkitMaskSize: 'contain',
-                                WebkitMaskRepeat: 'no-repeat',
-                                WebkitMaskPosition: 'center',
-                            }}
-                        />
-                        {/* Main Logo */}
-                        <div className="absolute inset-0"
-                            style={{
-                                maskImage: 'url(/Xemployeelogo.svg)',
-                                maskSize: 'contain',
-                                maskRepeat: 'no-repeat',
-                                maskPosition: 'center',
-                                WebkitMaskImage: 'url(/Xemployeelogo.svg)',
-                                WebkitMaskSize: 'contain',
-                                WebkitMaskRepeat: 'no-repeat',
-                                WebkitMaskPosition: 'center',
-                            }}
-                        >
-                            {/* Gradient Background */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] animate-gradient-flow" />
+            <div className="flex justify-center items-center px-4 md:px-8 py-4 md:py-6">
+                {/* Centered Navigation with Logo */}
+                <div className="flex items-center gap-8 font-mono text-sm text-white/80">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <div className="relative w-10 h-10">
+                            {/* Glow effect */}
+                            <div
+                                className="absolute inset-0 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] blur-sm opacity-50 animate-gradient-flow"
+                                style={{
+                                    maskImage: 'url(/Xemployeelogo.svg)',
+                                    maskSize: 'contain',
+                                    maskRepeat: 'no-repeat',
+                                    maskPosition: 'center',
+                                    WebkitMaskImage: 'url(/Xemployeelogo.svg)',
+                                    WebkitMaskSize: 'contain',
+                                    WebkitMaskRepeat: 'no-repeat',
+                                    WebkitMaskPosition: 'center',
+                                }}
+                            />
+                            {/* Main Logo */}
+                            <div className="absolute inset-0"
+                                style={{
+                                    maskImage: 'url(/Xemployeelogo.svg)',
+                                    maskSize: 'contain',
+                                    maskRepeat: 'no-repeat',
+                                    maskPosition: 'center',
+                                    WebkitMaskImage: 'url(/Xemployeelogo.svg)',
+                                    WebkitMaskSize: 'contain',
+                                    WebkitMaskRepeat: 'no-repeat',
+                                    WebkitMaskPosition: 'center',
+                                }}
+                            >
+                                {/* Gradient Background */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#dc2626] via-[#b91c1c] to-[#7f1d1d] animate-gradient-flow" />
 
-                            {/* Shine Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shine" />
+                                {/* Shine Effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shine" />
+                            </div>
                         </div>
-                    </div>
-                    <span className="font-mono text-lg font-semibold text-white">Xemployee™</span>
-                </Link>
+                        <span className="font-mono text-lg font-semibold text-white">Xemployee™</span>
+                    </Link>
 
-                {/* Centered Navigation */}
-                <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-8 font-mono text-sm text-white/80">
-                    <Link href="/product" className="hover:text-white transition-colors">
-                        Product
-                    </Link>
-                    <Link href="/xemployees" className="hover:text-white transition-colors">
-                        Xemployees
-                    </Link>
-                    <Link href="/enterprise" className="hover:text-white transition-colors">
-                        Enterprise
-                    </Link>
-                    <Link href="/pricing" className="hover:text-white transition-colors">
-                        Pricing
-                    </Link>
-                    <Link href="/updates" className="hover:text-white transition-colors">
-                        Updates
-                    </Link>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 }}
-                    >
-                        <Button
-                            variant="manifesto"
-                            size="lg"
-                            shine={true}
-                            asChild
-                            className="relative z-10"
+                    {/* Divider */}
+                    <div className="hidden lg:block h-6 w-px bg-white/20"></div>
+
+                    {/* Navigation Links */}
+                    <div className="hidden lg:flex items-center gap-8">
+                        <Link href="/product" className="hover:text-white transition-colors">
+                            Product
+                        </Link>
+                        <Link href="/xemployees" className="hover:text-white transition-colors">
+                            Xemployees
+                        </Link>
+                        <Link href="/enterprise" className="hover:text-white transition-colors">
+                            Enterprise
+                        </Link>
+                        <Link href="/pricing" className="hover:text-white transition-colors">
+                            Pricing
+                        </Link>
+                        <Link href="/updates" className="hover:text-white transition-colors">
+                            Updates
+                        </Link>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.2 }}
                         >
-                            <Link href="/vision">
-                                vision
-                            </Link>
-                        </Button>
-                    </motion.div>
+                            <Button
+                                variant="manifesto"
+                                size="lg"
+                                shine={true}
+                                asChild
+                                className="relative z-10"
+                            >
+                                <Link href="/vision">
+                                    vision
+                                </Link>
+                            </Button>
+                        </motion.div>
+                    </div>
                 </div>
 
-                {/* Right Side Buttons */}
-                {/* <div className="flex items-center space-x-8 font-mono text-sm text-white/80">
-                    <ExpandableButton
-                        buttonText="docs"
-                        layoutId="docs-modal"
-                        variant="manifesto"
-                        shine={true}
-                        modalTitle="Documentation"
-                        modalContent={
-                            <div className="text-white/80 text-lg text-center max-w-xl">
-                                <p className="mb-8">
-                                    Explore our comprehensive documentation to get started with Xemployee.
-                                </p>
-                                <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 font-mono text-white">
-                                    <code>Coming soon...</code>
+                {/* Hamburger Menu Button - Mobile Only */}
+                <button
+                    className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label="Toggle mobile menu"
+                >
+                    <motion.span
+                        className="w-6 h-0.5 bg-white rounded-full"
+                        animate={{
+                            rotate: mobileMenuOpen ? 45 : 0,
+                            y: mobileMenuOpen ? 8 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                    />
+                    <motion.span
+                        className="w-6 h-0.5 bg-white rounded-full"
+                        animate={{
+                            opacity: mobileMenuOpen ? 0 : 1,
+                        }}
+                        transition={{ duration: 0.3 }}
+                    />
+                    <motion.span
+                        className="w-6 h-0.5 bg-white rounded-full"
+                        animate={{
+                            rotate: mobileMenuOpen ? -45 : 0,
+                            y: mobileMenuOpen ? -8 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                    />
+                </button>
+
+                {/* Mobile Menu */}
+                <AnimatePresence>
+                    {mobileMenuOpen && (
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="lg:hidden fixed top-0 right-0 bottom-0 w-64 bg-black/95 backdrop-blur-xl border-l border-white/10 z-40"
+                        >
+                            <div className="flex flex-col gap-6 p-8 pt-24">
+                                <Link
+                                    href="/product"
+                                    className="text-white/80 hover:text-white transition-colors text-lg font-mono"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Product
+                                </Link>
+                                <Link
+                                    href="/xemployees"
+                                    className="text-white/80 hover:text-white transition-colors text-lg font-mono"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Xemployees
+                                </Link>
+                                <Link
+                                    href="/enterprise"
+                                    className="text-white/80 hover:text-white transition-colors text-lg font-mono"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Enterprise
+                                </Link>
+                                <Link
+                                    href="/pricing"
+                                    className="text-white/80 hover:text-white transition-colors text-lg font-mono"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Pricing
+                                </Link>
+                                <Link
+                                    href="/updates"
+                                    className="text-white/80 hover:text-white transition-colors text-lg font-mono"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Updates
+                                </Link>
+                                <div className="pt-4 border-t border-white/10">
+                                    <Button
+                                        variant="manifesto"
+                                        size="lg"
+                                        shine={true}
+                                        asChild
+                                        className="w-full"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        <Link href="/vision">
+                                            vision
+                                        </Link>
+                                    </Button>
                                 </div>
                             </div>
-                        }
-                        shaderColors={{
-                            swirlColorA: "#a78bfa",
-                            swirlColorB: "#ec4899",
-                            chromaBase: "#a78bfa"
-                        }}
-                    />
-                    <ExpandableButton
-                        buttonText="changelogs"
-                        layoutId="changelogs-modal"
-                        variant="manifesto"
-                        shine={true}
-                        modalTitle="Changelogs"
-                        backgroundSrc="/changelog-bg.mp4"
-                        backgroundPlaceholder="/default-placeholder.png"
-                        backgroundLoop={true}
-                        modalContent={
-                            <div className="text-white/80 text-lg text-center max-w-xl">
-                                <p className="mb-8">
-                                    Stay updated with the latest changes and improvements.
-                                </p>
-                                <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 font-mono text-white">
-                                    <code>Coming soon...</code>
-                                </div>
-                            </div>
-                        }
-                        shaderColors={{
-                            swirlColorA: "#ec4899",
-                            swirlColorB: "#f97316",
-                            chromaBase: "#ec4899"
-                        }}
-                    />
-                    <ExpandableButton
-                        buttonText="blogs"
-                        layoutId="blogs-modal"
-                        variant="manifesto"
-                        shine={true}
-                        modalTitle="Blog"
-                        modalContent={
-                            <div className="text-white/80 text-lg text-center max-w-xl">
-                                <p className="mb-8">
-                                    Read our latest articles and tutorials.
-                                </p>
-                                <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 font-mono text-white">
-                                    <code>Coming soon...</code>
-                                </div>
-                            </div>
-                        }
-                        shaderColors={{
-                            swirlColorA: "#f97316",
-                            swirlColorB: "#eab308",
-                            chromaBase: "#f97316"
-                        }}
-                    />
-                </div> */}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
     )
