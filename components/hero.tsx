@@ -78,19 +78,8 @@ export default function Hero() {
           className="relative w-full max-w-[95%] mx-auto"
         >
           <div className="relative aspect-video rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-black/40 backdrop-blur-sm">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent p-8 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-24 h-24 mx-auto rounded-full bg-secondary/20 flex items-center justify-center animate-pulse">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" className="text-secondary">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-white/60 font-mono text-sm uppercase tracking-wider">First look: Raptor-1 closing deals while you sleep</p>
-                <p className="text-white/50 text-sm max-w-md mx-auto mt-2">Watch an AI employee fill forms, send emails, and update your tools with zero human clicks.</p>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
           </div>
-          <p className="text-center text-white/40 font-mono text-xs mt-4 uppercase tracking-widest">Watch the revolution</p>
         </motion.div>
 
         {/* Footer Quote */}

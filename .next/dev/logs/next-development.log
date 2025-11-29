@@ -1,29 +1,5 @@
-[00:00:00.848] Server  LOG      ✓ Ready in 589ms
-[00:00:04.934] Server  LOG      ○ Compiling / ...
-[00:00:05.953] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.228] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
-[00:02:46.067] Server  LOG      ✓ Compiled in 92ms
-[00:03:16.324] Server  LOG      ✓ Compiled in 123ms
-[00:03:16.428] Browser ERROR   ./components/site-header.tsx:87:1
-Parsing ecmascript source code failed
-  85 |                                 asChild
-  86 |                                 className="relative z-10"
-> 87 | "use client"
-     | ^^^^^^^^^^^^
-  88 |
-  89 |                             import Link from "next/link"
-  90 |                             import {motion, AnimatePresence} from "framer-motion"
-
-Expected '</', got 'string literal (use client, "use client")'
-
-Import trace:
-  Server Component:
-    ./components/site-header.tsx
-    ./app/layout.tsx
-[00:03:52.385] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:52.627] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
-[00:06:05.669] Server  LOG      ✓ Compiled in 107ms
-[00:06:23.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:24.088] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
-[00:08:23.137] Server  LOG      ✓ Compiled in 124ms
-[00:08:53.432] Server  LOG      ✓ Compiled in 101ms
+[00:00:00.697] Server  LOG      ✓ Ready in 457ms
+[00:00:08.687] Server  LOG      ○ Compiling / ...
+[00:00:09.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.008] Browser WARN    THREE.WARNING: Multiple instances of Three.js being imported.
+[00:01:18.562] Server  LOG      ✓ Compiled in 134ms

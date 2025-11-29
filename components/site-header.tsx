@@ -132,8 +132,9 @@ export function SiteHeader() {
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
-                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="lg:hidden fixed top-0 right-0 bottom-0 w-64 bg-black/95 backdrop-blur-xl border-l border-white/10 z-40"
+                            transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
+                            className="lg:hidden fixed top-0 right-0 bottom-0 w-64 bg-black/98 border-l border-white/10 z-40"
+                            style={{ willChange: "transform" }}
                         >
                             <div className="flex flex-col gap-6 p-8 pt-24">
                                 <Link

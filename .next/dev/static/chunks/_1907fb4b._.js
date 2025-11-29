@@ -447,11 +447,14 @@ function SiteHeader() {
                             x: "100%"
                         },
                         transition: {
-                            type: "spring",
-                            damping: 25,
-                            stiffness: 200
+                            type: "tween",
+                            duration: 0.25,
+                            ease: "easeOut"
                         },
-                        className: "lg:hidden fixed top-0 right-0 bottom-0 w-64 bg-black/95 backdrop-blur-xl border-l border-white/10 z-40",
+                        className: "lg:hidden fixed top-0 right-0 bottom-0 w-64 bg-black/98 border-l border-white/10 z-40",
+                        style: {
+                            willChange: "transform"
+                        },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col gap-6 p-8 pt-24",
                             children: [
@@ -462,7 +465,7 @@ function SiteHeader() {
                                     children: "Product"
                                 }, void 0, false, {
                                     fileName: "[project]/components/site-header.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 140,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -472,7 +475,7 @@ function SiteHeader() {
                                     children: "Xemployees"
                                 }, void 0, false, {
                                     fileName: "[project]/components/site-header.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 147,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -482,7 +485,7 @@ function SiteHeader() {
                                     children: "Enterprise"
                                 }, void 0, false, {
                                     fileName: "[project]/components/site-header.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 154,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -492,7 +495,7 @@ function SiteHeader() {
                                     children: "Pricing"
                                 }, void 0, false, {
                                     fileName: "[project]/components/site-header.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 161,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -502,7 +505,7 @@ function SiteHeader() {
                                     children: "Updates"
                                 }, void 0, false, {
                                     fileName: "[project]/components/site-header.tsx",
-                                    lineNumber: 167,
+                                    lineNumber: 168,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -519,23 +522,23 @@ function SiteHeader() {
                                             children: "vision"
                                         }, void 0, false, {
                                             fileName: "[project]/components/site-header.tsx",
-                                            lineNumber: 183,
+                                            lineNumber: 184,
                                             columnNumber: 41
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/site-header.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 176,
                                         columnNumber: 37
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/site-header.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 175,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/site-header.tsx",
-                            lineNumber: 138,
+                            lineNumber: 139,
                             columnNumber: 29
                         }, this)
                     }, void 0, false, {

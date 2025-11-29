@@ -1056,10 +1056,6 @@
     margin-bottom: calc(var(--spacing) * 40);
   }
 
-  .mb-\[40rem\] {
-    margin-bottom: 40rem;
-  }
-
   .-ml-4 {
     margin-left: calc(var(--spacing) * -4);
   }
@@ -2509,6 +2505,16 @@
     }
   }
 
+  .bg-black\/98 {
+    background-color: #000000fa;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-black\/98 {
+      background-color: color-mix(in oklab, var(--color-black) 98%, transparent);
+    }
+  }
+
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
@@ -3348,10 +3354,6 @@
     padding-top: calc(var(--spacing) * 64);
   }
 
-  .pt-80 {
-    padding-top: calc(var(--spacing) * 80);
-  }
-
   .pr-1 {
     padding-right: calc(var(--spacing) * 1);
   }
@@ -3776,16 +3778,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .text-white\/40 {
       color: color-mix(in oklab, var(--color-white) 40%, transparent);
-    }
-  }
-
-  .text-white\/50 {
-    color: #ffffff80;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .text-white\/50 {
-      color: color-mix(in oklab, var(--color-white) 50%, transparent);
     }
   }
 
