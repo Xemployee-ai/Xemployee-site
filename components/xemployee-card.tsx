@@ -31,64 +31,66 @@ export function XemployeeCard({ xemployee, index }: XemployeeCardProps) {
             className={`relative group ${xemployee.comingSoon ? "opacity-50" : ""}`}
         >
             <div
-                className={`h-full p-8 rounded-xl border backdrop-blur-sm transition-all duration-300 ${xemployee.comingSoon
-                        ? "bg-white/5 border-white/10"
-                        : "manifesto-effect manifesto-effect-rounded"
+                className={`h-full p-8 rounded-xl border backdrop-blur-sm transition-all duration-300 flex flex-col ${xemployee.comingSoon
+                    ? "bg-white/5 border-white/10"
+                    : "manifesto-effect manifesto-effect-rounded"
                     }`}
             >
-                {/* Header */}
-                <div className="mb-6">
-                    <h3 className="text-3xl font-mono font-bold text-white mb-2">
-                        {xemployee.name}
-                    </h3>
-                    <p className="text-lg text-white/80 italic mb-3">{xemployee.tagline}</p>
+                <div className="flex-grow">
+                    {/* Header */}
+                    <div className="mb-6">
+                        <h3 className="text-3xl font-mono font-bold text-white mb-2">
+                            {xemployee.name}
+                        </h3>
+                        <p className="text-lg text-white/80 italic mb-3">{xemployee.tagline}</p>
 
-                    {/* Status Badge */}
-                    <div className="inline-block">
-                        <div
-                            className={`px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-gradient-to-r ${statusColors[xemployee.status]}`}
-                        >
-                            {statusText[xemployee.status]}
+                        {/* Status Badge */}
+                        <div className="inline-block">
+                            <div
+                                className={`px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-gradient-to-r ${statusColors[xemployee.status]}`}
+                            >
+                                {statusText[xemployee.status]}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Replaces */}
-                <div className="mb-6">
-                    <h4 className="text-sm font-mono text-white/60 uppercase tracking-wider mb-2">
-                        Replaces
-                    </h4>
-                    <p className="text-white font-medium">{xemployee.replaces}</p>
-                </div>
-
-                {/* What it does */}
-                <div className="mb-6">
-                    <h4 className="text-sm font-mono text-white/60 uppercase tracking-wider mb-3">
-                        Does
-                    </h4>
-                    <ul className="space-y-2">
-                        {xemployee.whatItDoes.map((item, idx) => (
-                            <li key={idx} className="flex items-baseline gap-2 text-white/80">
-                                <span className="text-secondary flex-shrink-0">→</span>
-                                <span className="text-sm">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                {/* Funny line */}
-                {xemployee.funnyLine && !xemployee.comingSoon && (
-                    <div className="mb-6 p-3 bg-white/5 rounded-lg border border-white/10">
-                        <p className="text-sm text-white/70 italic">"{xemployee.funnyLine}"</p>
+                    {/* Replaces */}
+                    <div className="mb-6">
+                        <h4 className="text-sm font-mono text-white/60 uppercase tracking-wider mb-2">
+                            Replaces
+                        </h4>
+                        <p className="text-white font-medium">{xemployee.replaces}</p>
                     </div>
-                )}
 
-                {/* Runs on */}
-                <div className="mb-8">
-                    <h4 className="text-sm font-mono text-white/60 uppercase tracking-wider mb-2">
-                        Runs on
-                    </h4>
-                    <p className="text-sm text-white/70">{xemployee.runsOn}</p>
+                    {/* What it does */}
+                    <div className="mb-6">
+                        <h4 className="text-sm font-mono text-white/60 uppercase tracking-wider mb-3">
+                            Does
+                        </h4>
+                        <ul className="space-y-2">
+                            {xemployee.whatItDoes.map((item, idx) => (
+                                <li key={idx} className="flex items-baseline gap-2 text-white/80">
+                                    <span className="text-secondary flex-shrink-0">→</span>
+                                    <span className="text-sm">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Funny line */}
+                    {xemployee.funnyLine && !xemployee.comingSoon && (
+                        <div className="mb-6 p-3 bg-white/5 rounded-lg border border-white/10">
+                            <p className="text-sm text-white/70 italic">"{xemployee.funnyLine}"</p>
+                        </div>
+                    )}
+
+                    {/* Runs on */}
+                    <div className="mb-8">
+                        <h4 className="text-sm font-mono text-white/60 uppercase tracking-wider mb-2">
+                            Runs on
+                        </h4>
+                        <p className="text-sm text-white/70">{xemployee.runsOn}</p>
+                    </div>
                 </div>
 
                 {/* CTAs - only for available employees */}
